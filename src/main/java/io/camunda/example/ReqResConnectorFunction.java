@@ -62,7 +62,7 @@ public class ReqResConnectorFunction implements OutboundConnectorFunction {
             return new ReqResConnectorResult("Response received: " + httpResponse.body());
 
         } catch (Exception e) {
-            e.printStackTrace();
+              LOGGER.error(e.getMessage());
             throw new ConnectorException("FAIL", e.getMessage());
         }
     }
