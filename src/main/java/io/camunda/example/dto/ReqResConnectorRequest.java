@@ -5,6 +5,6 @@ import io.camunda.connector.generator.java.annotation.TemplateProperty.PropertyT
 import jakarta.validation.constraints.NotEmpty;
 
 public record ReqResConnectorRequest(
-        @NotEmpty @TemplateProperty(group = "pagination", type = PropertyType.Text)int page,
-        @NotEmpty @TemplateProperty(group = "pagination", type = PropertyType.Text) int perPage) {
+        @TemplateProperty(group = "pagination", type = PropertyType.Text) String page,
+        @TemplateProperty(group = "pagination", type = PropertyType.Text) String per_page) {
 }
